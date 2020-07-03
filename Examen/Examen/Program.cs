@@ -35,6 +35,11 @@ namespace Examen
                         equipo.JugadoresEquipo();
                         break;
                     }
+                    else if (input_usuario == "4")
+                    {
+                        u = 0;
+                        break;
+                    }
                     else
                     {
                         Console.WriteLine("Criterio ingresado no válido");
