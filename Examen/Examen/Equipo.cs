@@ -121,42 +121,56 @@ namespace Examen
                 string NacionJugador = Console.ReadLine();
                 while (contador < 2)
                 {
-                    Console.Write("Ingresa el nombre del " + Convert.ToString(contador + 1) + " Arquero: ");
-                    string nombre = Console.ReadLine();
-                    Console.Write("Ingresa el numero de camiseta del " + Convert.ToString(contador + 1) + " Arquero: ");
-                    int numeroCamiseta = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese la Edad del " + Convert.ToString(contador + 1) + " Arquero: ");
-                    int EdadJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese el sueldo del " + Convert.ToString(contador + 1) + " Arquero: ");
-                    int SueldoJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese los puntos de ataque del " + Convert.ToString(contador + 1) + " Arquero: ");
-                    int PuntosAtaqueJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese los puntos de defensa del " + Convert.ToString(contador + 1) + " Arquero: ");
-                    int PuntosDefensaJugador = Int32.Parse(Console.ReadLine());
-                    Jugadores Arquero = new Jugadores(nombre, EdadJugador, NacionJugador, SueldoJugador, PuntosAtaqueJugador, PuntosDefensaJugador, numeroCamiseta, "Arquero");
-                    jugadores.Add(Arquero);
-                    contador++;
+                    try
+                    {
+                        Console.Write("Ingresa el nombre del " + Convert.ToString(contador + 1) + " Arquero: ");
+                        string nombre = Console.ReadLine();
+                        Console.Write("Ingresa el numero de camiseta del " + Convert.ToString(contador + 1) + " Arquero: ");
+                        int numeroCamiseta = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese la Edad del " + Convert.ToString(contador + 1) + " Arquero: ");
+                        int EdadJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese el sueldo del " + Convert.ToString(contador + 1) + " Arquero: ");
+                        int SueldoJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese los puntos de ataque del " + Convert.ToString(contador + 1) + " Arquero: ");
+                        int PuntosAtaqueJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese los puntos de defensa del " + Convert.ToString(contador + 1) + " Arquero: ");
+                        int PuntosDefensaJugador = Int32.Parse(Console.ReadLine());
+                        Jugadores Arquero = new Jugadores(nombre, EdadJugador, NacionJugador, SueldoJugador, PuntosAtaqueJugador, PuntosDefensaJugador, numeroCamiseta, "Arquero");
+                        jugadores.Add(Arquero);
+                        contador++;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Criterios ingresados no válidos");
+                    }
                 }
                 int contador2 = 0;
                 Console.WriteLine("Debe agregar 13 Jugadores en cancha");
                 Console.WriteLine("");
                 while (contador2 < 13)
                 {
-                    Console.Write("Ingresa el nombre del " + Convert.ToString(contador2 + 1) + " Jugador: ");
-                    string nombre = Console.ReadLine();
-                    Console.Write("Ingresa el numero de camiseta del " + Convert.ToString(contador2 + 1) + " Jugador: ");
-                    int numeroCamiseta = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese la Edad del " + Convert.ToString(contador2 + 1) + " Jugador: ");
-                    int EdadJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese el sueldo del " + Convert.ToString(contador2 + 1) + " Jugador: ");
-                    int SueldoJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese los puntos de ataque del " + Convert.ToString(contador2 + 1) + " Jugador: ");
-                    int PuntosAtaqueJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese los puntos de defensa del " + Convert.ToString(contador2 + 1) + " Jugador: ");
-                    int PuntosDefensaJugador = Int32.Parse(Console.ReadLine());
-                    Jugadores Jugador = new Jugadores(nombre, EdadJugador, NacionJugador, SueldoJugador, PuntosAtaqueJugador, PuntosDefensaJugador, numeroCamiseta, "Jugador");
-                    jugadores.Add(Jugador);
-                    contador2++;
+                    try
+                    {
+                        Console.Write("Ingresa el nombre del " + Convert.ToString(contador2 + 1) + " Jugador: ");
+                        string nombre = Console.ReadLine();
+                        Console.Write("Ingresa el numero de camiseta del " + Convert.ToString(contador2 + 1) + " Jugador: ");
+                        int numeroCamiseta = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese la Edad del " + Convert.ToString(contador2 + 1) + " Jugador: ");
+                        int EdadJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese el sueldo del " + Convert.ToString(contador2 + 1) + " Jugador: ");
+                        int SueldoJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese los puntos de ataque del " + Convert.ToString(contador2 + 1) + " Jugador: ");
+                        int PuntosAtaqueJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese los puntos de defensa del " + Convert.ToString(contador2 + 1) + " Jugador: ");
+                        int PuntosDefensaJugador = Int32.Parse(Console.ReadLine());
+                        Jugadores Jugador = new Jugadores(nombre, EdadJugador, NacionJugador, SueldoJugador, PuntosAtaqueJugador, PuntosDefensaJugador, numeroCamiseta, "Jugador");
+                        jugadores.Add(Jugador);
+                        contador2++;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Criterios ingresados no válidos");
+                    }
                 }
                 Console.Write("Ingresa el nombre del Entrenador: ");
                 string nombreEntrenador = Console.ReadLine();
@@ -190,46 +204,60 @@ namespace Examen
                 int contador3 = 0;
                 while (contador3 < 2)
                 {
-                    Console.Write("Ingresa el nombre del " + Convert.ToString(contador3 + 1) + " Arquero: ");
-                    string nombre = Console.ReadLine();
-                    Console.Write("Ingresa el numero de camiseta del " + Convert.ToString(contador3 + 1) + " Arquero: ");
-                    int numeroCamiseta = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese la Nacionalidad del " + Convert.ToString(contador3 + 1) + " Arquero: ");
-                    string NacionJugador2 = Console.ReadLine();
-                    Console.Write("Ingrese la Edad del " + Convert.ToString(contador3 + 1) + " Arquero: ");
-                    int EdadJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese el sueldo del " + Convert.ToString(contador3 + 1) + " Arquero: ");
-                    int SueldoJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese los puntos de ataque del " + Convert.ToString(contador3 + 1) + " Arquero: ");
-                    int PuntosAtaqueJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese los puntos de defensa del " + Convert.ToString(contador3 + 1) + " Arquero: ");
-                    int PuntosDefensaJugador = Int32.Parse(Console.ReadLine());
-                    Jugadores Arquero = new Jugadores(nombre, EdadJugador, NacionJugador2, SueldoJugador, PuntosAtaqueJugador, PuntosDefensaJugador, numeroCamiseta, "Arquero");
-                    jugadores.Add(Arquero);
-                    contador3++;
+                    try
+                    {
+                        Console.Write("Ingresa el nombre del " + Convert.ToString(contador3 + 1) + " Arquero: ");
+                        string nombre = Console.ReadLine();
+                        Console.Write("Ingresa el numero de camiseta del " + Convert.ToString(contador3 + 1) + " Arquero: ");
+                        int numeroCamiseta = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese la Nacionalidad del " + Convert.ToString(contador3 + 1) + " Arquero: ");
+                        string NacionJugador2 = Console.ReadLine();
+                        Console.Write("Ingrese la Edad del " + Convert.ToString(contador3 + 1) + " Arquero: ");
+                        int EdadJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese el sueldo del " + Convert.ToString(contador3 + 1) + " Arquero: ");
+                        int SueldoJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese los puntos de ataque del " + Convert.ToString(contador3 + 1) + " Arquero: ");
+                        int PuntosAtaqueJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese los puntos de defensa del " + Convert.ToString(contador3 + 1) + " Arquero: ");
+                        int PuntosDefensaJugador = Int32.Parse(Console.ReadLine());
+                        Jugadores Arquero = new Jugadores(nombre, EdadJugador, NacionJugador2, SueldoJugador, PuntosAtaqueJugador, PuntosDefensaJugador, numeroCamiseta, "Arquero");
+                        jugadores.Add(Arquero);
+                        contador3++;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Criterios ingresados no válidos");
+                    }
                 }
                 int contador4 = 0;
                 Console.WriteLine("Debe agregar 13 Jugadores");
                 Console.WriteLine("");
                 while (contador4 < 13)
                 {
-                    Console.Write("Ingresa el nombre del " + Convert.ToString(contador4 + 1) + " Jugador: ");
-                    string nombre = Console.ReadLine();
-                    Console.Write("Ingresa el numero de camiseta del " + Convert.ToString(contador4 + 1) + " Jugador: ");
-                    int numeroCamiseta = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese la Edad del " + Convert.ToString(contador4 + 1) + " Jugador: ");
-                    int EdadJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese la Nacionalidad del " + Convert.ToString(contador4 + 1) + " Jugador: ");
-                    string NacionJugador2 = Console.ReadLine();
-                    Console.Write("Ingrese el sueldo del " + Convert.ToString(contador4 + 1) + " Jugador: ");
-                    int SueldoJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese los puntos de ataque del " + Convert.ToString(contador4 + 1) + " Jugador: ");
-                    int PuntosAtaqueJugador = Int32.Parse(Console.ReadLine());
-                    Console.Write("Ingrese los puntos de defensa del " + Convert.ToString(contador4 + 1) + " Jugador: ");
-                    int PuntosDefensaJugador = Int32.Parse(Console.ReadLine());
-                    Jugadores Jugador = new Jugadores(nombre, EdadJugador, NacionJugador2, SueldoJugador, PuntosAtaqueJugador, PuntosDefensaJugador, numeroCamiseta, "Jugador");
-                    jugadores.Add(Jugador);
-                    contador4++;
+                    try
+                    {
+                        Console.Write("Ingresa el nombre del " + Convert.ToString(contador4 + 1) + " Jugador: ");
+                        string nombre = Console.ReadLine();
+                        Console.Write("Ingresa el numero de camiseta del " + Convert.ToString(contador4 + 1) + " Jugador: ");
+                        int numeroCamiseta = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese la Edad del " + Convert.ToString(contador4 + 1) + " Jugador: ");
+                        int EdadJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese la Nacionalidad del " + Convert.ToString(contador4 + 1) + " Jugador: ");
+                        string NacionJugador2 = Console.ReadLine();
+                        Console.Write("Ingrese el sueldo del " + Convert.ToString(contador4 + 1) + " Jugador: ");
+                        int SueldoJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese los puntos de ataque del " + Convert.ToString(contador4 + 1) + " Jugador: ");
+                        int PuntosAtaqueJugador = Int32.Parse(Console.ReadLine());
+                        Console.Write("Ingrese los puntos de defensa del " + Convert.ToString(contador4 + 1) + " Jugador: ");
+                        int PuntosDefensaJugador = Int32.Parse(Console.ReadLine());
+                        Jugadores Jugador = new Jugadores(nombre, EdadJugador, NacionJugador2, SueldoJugador, PuntosAtaqueJugador, PuntosDefensaJugador, numeroCamiseta, "Jugador");
+                        jugadores.Add(Jugador);
+                        contador4++;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Criterios ingresados no válidos");
+                    }
                 }
                 Console.Write("Ingresa el nombre del Entrenador: ");
                 string nombreEntrenador2 = Console.ReadLine();
